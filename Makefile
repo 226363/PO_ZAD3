@@ -1,6 +1,7 @@
 #
 #  To sa opcje dla kompilacji
 #
+.PHONY: clean
 CPPFLAGS= -c -g -Iinc -Wall -pedantic
 
 __start__: uklad_rownan
@@ -17,7 +18,7 @@ obj/main.o: src/main.cpp inc/UkladRownanLiniowych.hh inc/Macierz.hh inc/Wektor.h
 obj/UkladRownanLiniowych.o: src/UkladRownanLiniowych.cpp inc/UkladRownanLiniowych.hh
 	g++ ${CPPFLAGS} -o obj/UkladRownanLiniowych.o src/UkladRownanLiniowych.cpp
 
-obj/Macierz.o: src/Macierz.cpp inc/Macierz.hh 
+obj/Macierz.o: src/Macierz.cpp inc/Macierz.hh
 	g++ ${CPPFLAGS} -o obj/Macierz.o src/Macierz.cpp
 
 obj/Wektor.o: src/Wektor.cpp inc/Wektor.hh inc/rozmiar.h

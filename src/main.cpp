@@ -17,9 +17,10 @@ using namespace std;
 
 int main()
 {
+  //double tablica[] = {2,3,4};
   //UkladRownanLiniowych   UklRown;   // To tylko przykladowe definicje zmiennej
-  double k[]={2,3,4};
-  Wektor v(*k);
-
-  cout << endl << " Start programu " << endl << endl;
+  Wektor W;
+ cin >> W;
+ cout << W;
+  //cout << endl << " Start programu " << endl << endl;
 }

@@ -10,15 +10,17 @@
  *  i jakie ma glowne cechy.
  */
 class Wektor {
-
   int rozmiar;
   double *v;
 
   public:
     Wektor ();
-    Wektor(int rozmiar, double *v);
+    Wektor (int r, double *data);
+    ~ Wektor();
+    void Write();
+    friend std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
+    friend std::istream& operator >> (std::istream &Strm, Wektor &Wek);
 };
-
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
