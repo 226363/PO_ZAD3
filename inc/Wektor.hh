@@ -22,9 +22,17 @@ class Wektor {
     friend std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
     friend std::istream& operator >> (std::istream &Strm, Wektor &Wek);
     friend Wektor operator + (const Wektor &w1, const Wektor &w2);
+    friend Wektor operator - (const Wektor &w1, const Wektor &w2);
+    friend Wektor operator * (const Wektor &w1, const Wektor &w2);
+    friend Wektor operator * (const Wektor &w1, const double &l);
+    friend Wektor operator / (const Wektor &w1, const double &l);
 };
 
-    Wektor operator + (const Wektor &w1, const Wektor &w2);
+  Wektor operator + (const Wektor &w1, const Wektor &w2);
+  Wektor operator - (const Wektor &w1, const Wektor &w2);
+  Wektor operator * (const Wektor &w1, const Wektor &w2);
+  Wektor operator * (const Wektor &w1, const double &l);
+  Wektor operator / (const Wektor &w1, const double &l);
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
  * danych akceptuje. Jakie jest znaczenie parametrow itd.

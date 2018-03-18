@@ -24,8 +24,8 @@ int main()
  cout << W1<<endl;
  cin >>W2;
  cout << W2<<endl;
- W=W1+W2;
- cout << W1+ W2<<endl;
+ W=W1/5;
+ cout << W1/5<<endl;
  cout << W;
   //cout << endl << " Start programu " << endl << endl;
 }
