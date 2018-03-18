@@ -39,3 +39,20 @@ for(int i=0; i<ROZMIAR; i++){
   }
   return Strm;
 }
+///////////////////////
+Wektor operator + (const Wektor &w1, const Wektor &w2){
+  Wektor result;
+  for (int i=0; i<ROZMIAR; i++){
+
+    result.v[i]=w1.v[i]+w2.v[i];
+  //  cout << i << " W1: "<< w1.v[i] << " W2: " << w2.v[i] << " W3: " << result.v[i]<<endl;
+  }
+
+  return result;
+}
+
+Wektor Wektor::operator = (const Wektor &W){  //to change, but now result of add is ok 
+  for (int i=0; i<ROZMIAR; i++){
+  v[i] = W.v[i];}
+  return W;
+}

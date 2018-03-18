@@ -19,8 +19,13 @@ int main()
 {
   //double tablica[] = {2,3,4};
   //UkladRownanLiniowych   UklRown;   // To tylko przykladowe definicje zmiennej
-  Wektor W;
- cin >> W;
+  Wektor W1, W2, W;
+ cin >> W1;
+ cout << W1<<endl;
+ cin >>W2;
+ cout << W2<<endl;
+ W=W1+W2;
+ cout << W1+ W2<<endl;
  cout << W;
   //cout << endl << " Start programu " << endl << endl;
 }
