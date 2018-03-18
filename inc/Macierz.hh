@@ -17,6 +17,7 @@ class Macierz {
   Macierz(Wektor *data);
   ~Macierz();
   friend std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
+  friend std::istream& operator >> (std::istream &Strm, Macierz &Mac);
 };
 
 
@@ -27,7 +28,7 @@ class Macierz {
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt
  */
-//std::istream& operator >> (std::istream &Strm, Macierz &Mac);
+std::istream& operator >> (std::istream &Strm, Macierz &Mac);
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format

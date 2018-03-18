@@ -20,3 +20,10 @@ std::ostream& operator << (std::ostream &Strm, const Macierz &Mac){
   }
   return Strm;
 }
+
+std::istream& operator >> (std::istream &Strm, Macierz &Mac){
+  for(int i=0; i<ROZMIAR; i++){
+      Strm >> Mac.mac[i];
+    }
+    return Strm;
+}

@@ -17,5 +17,7 @@ int main()
  Macierz K (tab);
  cout <<endl<<endl;
  cout << K;
+ cin >> K;
+ cout<<K;
 //cout << endl << " Start programu " << endl << endl;
 }
