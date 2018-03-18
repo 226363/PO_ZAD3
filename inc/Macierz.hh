@@ -2,6 +2,7 @@
 #define MACIERZ_HH
 
 #include "rozmiar.h"
+#include "Wektor.hh"
 #include <iostream>
 
 
@@ -10,13 +11,12 @@
  *  i jakie ma glowne cechy.
  */
 class Macierz {
-  /*
-   *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
-   */
+  Wektor *mac;
   public:
-  /*
-   *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
-   */    
+  Macierz();
+  Macierz(Wektor *data);
+  ~Macierz();
+  friend std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
 };
 
 
@@ -25,16 +25,16 @@ class Macierz {
  * danych akceptuje. Jakie jest znaczenie parametrow itd.
  * Szczegoly dotyczace zalecen realizacji opisow mozna
  * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt 
+ *    ~bk/edu/kpo/zalecenia.txt
  */
-std::istream& operator >> (std::istream &Strm, Macierz &Mac);
+//std::istream& operator >> (std::istream &Strm, Macierz &Mac);
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
  * danych akceptuje. Jakie jest znaczenie parametrow itd.
  * Szczegoly dotyczace zalecen realizacji opisow mozna
  * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt 
+ *    ~bk/edu/kpo/zalecenia.txt
  */
 std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
 

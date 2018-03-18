@@ -15,7 +15,8 @@ Wektor::Wektor(int r, double *data){  //Recently I dont't use it
 }
 
 Wektor::~Wektor(){
-  delete []v;
+//  delete []v;
+cout << "Kasuje";
 }
 //////////////
 std::ostream& operator << (std::ostream &Strm, const Wektor &Wek){
