@@ -27,3 +27,8 @@ std::istream& operator >> (std::istream &Strm, Macierz &Mac){
     }
     return Strm;
 }
+/*  double get_Matrix(int y, int x){
+   Wektor tmp;
+    tmp=mac[y];
+    return tmp.getVector(x);
+  } */

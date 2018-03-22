@@ -1,9 +1,14 @@
 #include "UkladRownanLiniowych.hh"
 
+using namespace std;
 
-/*
- *  Tutaj nalezy zdefiniowac odpowiednie metody
- *  klasy UkladRownanLiniowych, ktore zawieraja 
- *  wiecej kodu niz dwie linijki.
- *  Mniejsze metody mozna definiwac w ciele klasy.
- */
+
+UkladRownanLiniowych::UkladRownanLiniowych(Macierz m, Wektor wek){
+wspolczynniki=m; x=wek;
+}
+
+std::ostream& operator << ( std::ostream                  &Strm,
+                            const UkladRownanLiniowych    &UklRown
+                          ){
+
+    return Strm;}

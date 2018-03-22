@@ -16,27 +16,14 @@ class Macierz {
   Macierz();
   Macierz(Wektor *data);
   ~Macierz();
+  Wektor & operator [](int indeks){ return mac[indeks];}
   friend std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
   friend std::istream& operator >> (std::istream &Strm, Macierz &Mac);
 };
 
-
-/*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt
- */
 std::istream& operator >> (std::istream &Strm, Macierz &Mac);
 
-/*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt
- */
+
 std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
 
 

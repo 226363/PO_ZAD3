@@ -2,83 +2,89 @@
 #include "rozmiar.h"
 using namespace std;
 
-Wektor::Wektor(){
-  rozmiar=ROZMIAR;  //important
-  v=new double [rozmiar];
-}
-Wektor::Wektor(int r, double *data){  //Recently I dont't use it
-  rozmiar=r;
+Wektor::Wektor() {
+  rozmiar = ROZMIAR; // important
   v = new double[rozmiar];
-  for (int i=0; i<rozmiar; i++){
-    v[i]=data[i];
+}
+Wektor::Wektor(int r, double *data) { // Recently I dont't use it
+  rozmiar = r;
+  v = new double[ROZMIAR];
+  for (int i = 0; i < ROZMIAR; i++) {
+    v[i] = data[i];
   }
 }
 
-Wektor::~Wektor(){
-//  delete []v;
-cout << "Kasuje";
+Wektor::~Wektor() {
+  //  delete []v;
+  // cout << "Kasuje";
 }
 //////////////
-std::ostream& operator << (std::ostream &Strm, const Wektor &Wek){
-  for(int i=0; i<Wek.rozmiar; i++){
-    Strm<<Wek.v[i]<<" ";
+std::ostream &operator<<(std::ostream &Strm, const Wektor &Wek) {
+  for (int i = 0; i < ROZMIAR; i++) {
+    Strm << Wek.v[i] << " ";
   }
   return Strm;
 }
 
-void Wektor::Write(){
-      for(int i=0; i<rozmiar; i++){
-        cout<<v[i]<<" ";
-      }
-    }
-    /////////////////////////////
+void Wektor::Write() {
+  for (int i = 0; i < ROZMIAR; i++) {
+    cout << v[i] << " ";
+  }
+}
+/////////////////////////////
 
-std::istream& operator >> (std::istream &Strm, Wektor &Wek){
-// cout<<"cos";
-for(int i=0; i<ROZMIAR; i++){
+std::istream &operator>>(std::istream &Strm, Wektor &Wek) {
+  // cout<<"cos";
+  for (int i = 0; i < ROZMIAR; i++) {
     Strm >> Wek.v[i];
   }
   return Strm;
 }
 ///////////////////////
-Wektor operator + (const Wektor &w1, const Wektor &w2){
+Wektor operator+(const Wektor &w1, const Wektor &w2) {
   Wektor result;
-  for (int i=0; i<ROZMIAR; i++){
+  for (int i = 0; i < ROZMIAR; i++) {
 
-    result.v[i]=w1.v[i]+w2.v[i];
-  //  cout << i << " W1: "<< w1.v[i] << " W2: " << w2.v[i] << " W3: " << result.v[i]<<endl;
+    result.v[i] = w1.v[i] + w2.v[i];
+    //  cout << i << " W1: "<< w1.v[i] << " W2: " << w2.v[i] << " W3: " <<
+    //  result.v[i]<<endl;
   }
 
   return result;
 }
 
-Wektor Wektor::operator = (const Wektor &W){  //to change, but now result of add is ok
-  for (int i=0; i<ROZMIAR; i++){
-  v[i] = W.v[i];}
+Wektor Wektor::operator=(const Wektor &W) { // to change, but now result of add is ok
+  for (int i = 0; i < ROZMIAR; i++) {
+    v[i] = W.v[i];
+  }
   return W;
 }
 
-  Wektor operator - (const Wektor &w1, const Wektor &w2){
-    Wektor result;
-    for (int i=0; i<ROZMIAR; i++){
-      result.v[i]=w1.v[i]-w2.v[i];}
-      return result;
-  }
-Wektor operator * (const Wektor &w1, const Wektor &w2){
+Wektor operator-(const Wektor &w1, const Wektor &w2) {
   Wektor result;
-  for (int i=0; i<ROZMIAR; i++){
-    result.v[i]=w1.v[i]*w2.v[i];}
-    return result;
-}
-  Wektor operator * (const Wektor &w1, const double &l){
-    Wektor result;
-    for (int i=0; i<ROZMIAR; i++){
-      result.v[i]=w1.v[i]*l;}
-      return result;
+  for (int i = 0; i < ROZMIAR; i++) {
+    result.v[i] = w1.v[i] - w2.v[i];
   }
-  Wektor operator / (const Wektor &w1, const double &l){
-    Wektor result;
-    for (int i=0; i<ROZMIAR; i++){
-      result.v[i]=w1.v[i]/l;}
-      return result;
+  return result;
+}
+Wektor operator*(const Wektor &w1, const Wektor &w2) {
+  Wektor result;
+  for (int i = 0; i < ROZMIAR; i++) {
+    result.v[i] = w1.v[i] * w2.v[i];
+  }
+  return result;
+}
+Wektor operator*(const Wektor &w1, const double &l) {
+  Wektor result;
+  for (int i = 0; i < ROZMIAR; i++) {
+    result.v[i] = w1.v[i] * l;
+  }
+  return result;
+}
+Wektor operator/(const Wektor &w1, const double &l) {
+  Wektor result;
+  for (int i = 0; i < ROZMIAR; i++) {
+    result.v[i] = w1.v[i] / l;
+  }
+  return result;
 }

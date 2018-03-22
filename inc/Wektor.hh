@@ -19,6 +19,7 @@ class Wektor {
     ~ Wektor();
     void Write();
     Wektor operator = (const Wektor &W);
+    double & operator [](int indeks){ return v[indeks];}
     friend std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
     friend std::istream& operator >> (std::istream &Strm, Wektor &Wek);
     friend Wektor operator + (const Wektor &w1, const Wektor &w2);
@@ -33,22 +34,11 @@ class Wektor {
   Wektor operator * (const Wektor &w1, const Wektor &w2);
   Wektor operator * (const Wektor &w1, const double &l);
   Wektor operator / (const Wektor &w1, const double &l);
-/*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt
- */
+
+
 std::istream& operator >> (std::istream &Strm, Wektor &Wek);
 
-/*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt
- */
+
 std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
 
 #endif
