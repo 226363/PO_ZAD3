@@ -10,12 +10,11 @@
  *  i jakie ma glowne cechy.
  */
 class Wektor {
-  int rozmiar;
   double *v;
 
   public:
     Wektor ();
-    Wektor (int r, double *data);
+    Wektor (double *data);
     ~ Wektor();
     void Write();
     Wektor operator = (const Wektor &W);

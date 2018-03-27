@@ -3,11 +3,9 @@
 using namespace std;
 
 Wektor::Wektor() {
-  rozmiar = ROZMIAR; // important
-  v = new double[rozmiar];
+  v = new double[ROZMIAR];
 }
-Wektor::Wektor(int r, double *data) { // Recently I dont't use it
-  rozmiar = r;
+Wektor::Wektor(double *data) { // Recently I dont't use it
   v = new double[ROZMIAR];
   for (int i = 0; i < ROZMIAR; i++) {
     v[i] = data[i];
