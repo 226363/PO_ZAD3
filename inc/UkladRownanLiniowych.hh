@@ -1,10 +1,9 @@
 #ifndef UKLADROWNANLINIOWYCH_HH
 #define UKLADROWNANLINIOWYCH_HH
-#include "rozmiar.h"
 #include "Macierz.hh"
 #include "Wektor.hh"
+#include "rozmiar.h"
 #include <iostream>
-
 
 /*
  *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
@@ -13,21 +12,19 @@
 class UkladRownanLiniowych {
   Macierz wspolczynniki;
   Wektor x;
-  public:
-  UkladRownanLiniowych();
+
+public:
   UkladRownanLiniowych(Macierz m, Wektor x);
-  const Macierz getWspolczynniki();
-  const Wektor getX();
+  UkladRownanLiniowych();
+  friend std::istream &operator>>(std::istream &Strm,
+                                  UkladRownanLiniowych &UklRown);
+  friend std::ostream &operator<<(std::ostream &Strm,
+                                  const UkladRownanLiniowych &UklRown);
 };
 
+std::istream &operator>>(std::istream &Strm, UkladRownanLiniowych &UklRown);
 
-
-std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
-
-
-std::ostream& operator << ( std::ostream                  &Strm,
-                            const UkladRownanLiniowych    &UklRown
-                          );
-
+std::ostream &operator<<(std::ostream &Strm,
+                         const UkladRownanLiniowych &UklRown);
 
 #endif
