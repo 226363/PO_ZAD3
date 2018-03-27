@@ -14,6 +14,7 @@ public:
   Macierz(Wektor *data);
   ~Macierz();
   Wektor &operator[](int indeks) { return mac[indeks]; }
+  Macierz getMacierz(){return mac;}
   friend std::ostream &operator<<(std::ostream &Strm, const Macierz &Mac);
   friend std::istream &operator>>(std::istream &Strm, Macierz &Mac);
 };

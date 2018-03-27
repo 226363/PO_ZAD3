@@ -8,6 +8,10 @@ int main()
 {
 //cout << endl << " Start programu " << endl << endl;
 UkladRownanLiniowych ikl;
+Macierz wynik;
 cin>>ikl;
 cout<<ikl;
+wynik=ikl.getMacierzUklad().Wyznacznik();
+cout<<wynik;
+return 0;
 }
