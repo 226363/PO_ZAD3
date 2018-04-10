@@ -86,3 +86,6 @@ Wektor operator/(const Wektor &w1, const double &l) {
   }
   return result;
 }
+double Wektor::IloczynSkalarny(){
+  
+}

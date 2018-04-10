@@ -16,8 +16,8 @@ class UkladRownanLiniowych {
 public:
   UkladRownanLiniowych(Macierz m, Wektor x);
   UkladRownanLiniowych();
-  Wektor Rozwiazanie();
-  Macierz getMacierzUklad(){return wspolczynniki;}
+  const Wektor Wyznacznik ();
+  const void Blad (Wektor wynik);
   friend std::istream &operator>>(std::istream &Strm,
                                   UkladRownanLiniowych &UklRown);
   friend std::ostream &operator<<(std::ostream &Strm,

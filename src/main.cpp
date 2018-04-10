@@ -6,12 +6,18 @@ using namespace std;
 
 int main()
 {
-//cout << endl << " Start programu " << endl << endl;
+cout << endl << " Start programu " << endl << endl;
 UkladRownanLiniowych ikl;
-Macierz wynik;
+UkladRownanLiniowych rozw;
+Macierz W;
+Wektor iksy;
 cin>>ikl;
 cout<<ikl;
-wynik=ikl.getMacierzUklad().Wyznacznik();
-cout<<wynik;
+//cout<<ikl.Wyznacznik();
+iksy=ikl.Wyznacznik();
+cout<<"Rozwiazanie x = (x1, x2, x3):"<<endl;
+cout<<iksy<<endl;
+cout.setf( ios::scientific );
+ikl.Blad(iksy);
 return 0;
 }
